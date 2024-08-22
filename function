@@ -1,0 +1,19 @@
+def Excellent_students(B,A,Nb,Na):
+
+    scor = 0
+    i = 0
+    x = 0
+    rolled_down = []
+    while i < Na:
+        while x < Nb:
+            if A[i] == B[x]:
+                scor +=1
+
+            x += 1
+        x = 0
+
+        if scor == 0:
+            rolled_down.append(A[i])
+        i += 1
+        scor = 0
+    print("Ребята которые скатились : ",",".join(map(str,rolled_down)))
